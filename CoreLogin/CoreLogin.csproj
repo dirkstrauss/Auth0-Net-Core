@@ -5,19 +5,34 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="css\**" />
+    <Compile Remove="fonts\**" />
+    <Compile Remove="images\**" />
+    <Compile Remove="js\**" />
+    <Compile Remove="vendor\**" />
+    <Content Remove="css\**" />
+    <Content Remove="fonts\**" />
+    <Content Remove="images\**" />
+    <Content Remove="js\**" />
+    <Content Remove="vendor\**" />
+    <EmbeddedResource Remove="css\**" />
+    <EmbeddedResource Remove="fonts\**" />
+    <EmbeddedResource Remove="images\**" />
+    <EmbeddedResource Remove="js\**" />
+    <EmbeddedResource Remove="vendor\**" />
+    <None Remove="css\**" />
+    <None Remove="fonts\**" />
+    <None Remove="images\**" />
+    <None Remove="js\**" />
+    <None Remove="vendor\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.5" />
   </ItemGroup>
 
   <ItemGroup>
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.2" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="css\" />
-    <Folder Include="fonts\" />
-    <Folder Include="images\" />
-    <Folder Include="js\" />
-    <Folder Include="vendor\" />
   </ItemGroup>
 
 </Project>
