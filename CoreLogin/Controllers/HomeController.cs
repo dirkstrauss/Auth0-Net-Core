@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using CoreLogin.Models;
+using Microsoft.AspNetCore.Authentication;
 
 namespace CoreLogin.Controllers
 {
@@ -13,6 +14,11 @@ namespace CoreLogin.Controllers
         public IActionResult Index()
         {
             return View();
+        }
+        
+        public async Task LoginAsync(string returnUrl = "/")
+        {
+            await HttpContext.ChallengeAsync("Auth0", new AuthenticationProperties() { RedirectUri = returnUrl });
         }
 
         public IActionResult About()
